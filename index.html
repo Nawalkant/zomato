@@ -17,19 +17,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
     <script src="https://kit.fontawesome.com/e76072a7dc.js" crossorigin="anonymous"></script>
-    
-  <style>
-      body{
-        overflow-x: hidden;
-      }
-
-      #cards:hover{
-        transform: scale(1.07);
-      }
-  </style>
-    
+    <link href="cupon.css" rel="stylesheet" type="text/css"/>
+        <script src="cupon.js"></script>
+        <style>
+          #cards:hover{
+            transform: scale(1.07);
+          }
+         </style>
+        <style>
+          body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          .dark-mode {
+            background-color: black;
+            color: white;
+          }
+          .light-mode {
+            background-color: white;
+            color: black;
+          }
+        </style>
   </head>
   <body>
+    <div>
+      <div id="coupon">
+          <button onClick="closeCoupon()">&times;</button>
+      </div>
+  </div>
+  <script>
+      window.onload=loadCoupon()
+  </script>
+      <button onclick="darkMode()">Darkmode</button>
+      <button onclick="lightMode()">LightMode</button>
+      <script>
+        function darkMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "dark-mode";
+          content.innerText = "Dark Mode is ON";
+        }
+        function lightMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "light-mode";
+          content.innerText = "Dark Mode is OFF";
+        }
+      </script>
     <div class="container-fluid">
         <div class="carousel-indicators">
           <button
@@ -55,25 +91,6 @@
               alt="zomato"
               height="450px"
             />
-            <div>
-              <input type="checkbox" class="checkbox" id="chk" />
-              <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div>
-            
-           
-            </div>
-            <button class="floating-btn">
-              Get in Touch
-            </button>
-            
-            <div class="floating-text">
-              Part of <a href="https://florin-pop.com/blog/2019/09/100-days-100-projects" target="_blank">#100Days100Projects</a>
-            </div>
-
             <div class="carousel-caption d-none d-md-block">
              <div class="container-sm" style="margin-bottom: 100px;margin-left: 400px;">
                 <a href=""></a> <h6 style="display: inline;margin-left: 20px;">Log In</h6>
@@ -99,7 +116,7 @@
               src="food2.jpg"
               class="d-block w-100"
               alt="sanitizing"
-            / height="450px">
+             height="450px"/>
             <div class="carousel-caption d-none d-md-block">
               <div class="container-sm" style="margin-bottom: 100px;margin-left: 400px;">
                 <a  href=""></a> <h6 style="display: inline;margin-left: 20px;">Log In</h6> 
