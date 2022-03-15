@@ -1,0 +1,10 @@
+
+#coupon{
+    height:200px;
+    width:800px;
+    background-color:gray;
+    z-index:100;
+    margin:auto;
+    visibility: hidden;
+    position: absolute;
+}
